@@ -56,6 +56,9 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    // will crash when controller disappear
+    self.scrollView.segmentedControl = nil;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
